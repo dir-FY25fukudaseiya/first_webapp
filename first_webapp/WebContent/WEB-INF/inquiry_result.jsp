@@ -4,7 +4,7 @@
  <html lang="ja">
  <head>
  <meta charset="UTF-8">
- <title>お問い合わせ結果</title>
+ <title>お問い合わせ結果</title>５
  </head>
  <body>
  <c:choose>
