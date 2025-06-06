@@ -1,17 +1,20 @@
 package listener; 
+
 import java.io.FileInputStream; 
 import java.io.FileNotFoundException; 
 import java.io.IOException; 
 import java.io.InputStream; 
 import java.util.Iterator; 
 import java.util.Properties;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent; 
 import javax.servlet.ServletContextListener; 
 import javax.servlet.annotation.WebListener;
 
 @WebListener
- public class PropertiesListener implements ServletContextListener { 
+ public class PropertiesListener implements ServletContextListener {
+    
 public PropertiesListener() { 
 }
 public void contextDestroyed(ServletContextEvent sce) { 
@@ -30,8 +33,7 @@ while (pit.hasNext()) {
 String pname = pit.next(); 
 context.setAttribute(pname, properties.getProperty(pname)); 
 } 
-} catch (FileNotFoundException e) { 
-} catch (IOException e) { 
+} catch (FileNotFoundException e) { }
+catch (IOException e) { }
 }
- }
- }
+}
